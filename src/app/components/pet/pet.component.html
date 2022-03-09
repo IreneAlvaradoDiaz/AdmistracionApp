@@ -1,0 +1,37 @@
+<button (click)="goHome()" class="button"><i class="pi pi-arrow-left"></i></button>
+<div style="margin-top: 20px;">
+    <p-table [value]="pets">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Photo</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+                <th>enfermedades</th>
+                <th>chip</th>
+                <th>vacunas</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pet>
+            <tr>
+                <td><img class="img" [src]="pet.photo" alt=""></td>
+                <td>{{pet.nombre}}</td>
+                <td>{{pet.tipo}}</td>
+                <td>{{pet.raza}}</td>
+                <td>{{pet.fechaNacimiento}}</td>
+                <td class="item">
+                    <p class="man" *ngIf="pet.sexo == 'Macho'"><img  src="../../assets/img/img_504768.png" alt=""></p>
+                    <p *ngIf="pet.sexo == 'Hembra'"><img src="../../assets/img/businesswoman-female-icon-19.png" alt=""></p>
+                </td>
+                <td *ngIf="!pet.enfermedad">Ninguna enfermedad</td>
+                <td *ngIf="pet.enfermedad">Tien alguna enfermedad</td>
+                <td *ngIf="!pet.chip">No tiene chip</td>
+                <td *ngIf="pet.chip">Tiene chip</td>
+                <td *ngIf="!pet.vacunas">No tiene vacuna</td>
+                <td *ngIf="pet.vacunas">Tiene vacuna</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

@@ -1,0 +1,35 @@
+<button (click)="goHome()" class="button"><i class="pi pi-arrow-left"></i></button>
+<div style="margin-top: 20px;">
+    <p-table [value]="adverts">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Sexo</th>
+                <th>Edad</th>
+                <th>Anuncios</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-advert>
+            <tr>
+                <td><img class="img" [src]="advert.photo" alt=""></td>
+                <td>{{advert.nameUsers.nombre}}</td>
+                <td>{{advert.nameUsers.apellidos}}</td>
+                <td>{{advert.nameUsers.email}}</td>
+                <td class="item">
+                    <p class="man" *ngIf="advert.nameUsers.sexo == 'Hombre'"><img src="../../assets/img/img_504768.png" alt=""></p>
+                    <p *ngIf="advert.nameUsers.sexo == 'Mujer'"><img src="../../assets/img/businesswoman-female-icon-19.png" alt=""></p>
+                </td>
+                <td>{{advert.nameUsers.edad}} años</td>
+                <td>{{advert.title}}</td>
+                <td><button pButton (click)="confirm(advert)">X</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+</div>
+
+

@@ -1,10 +1,13 @@
 export interface User {
-    nombre: string;
-    apellidos: string;
-    sexo: string;
-    edad: number;
-    telefono: number;
-    email: string;
-    valoracion: number;
-    anuncios: number;
+    userId:string;
+    photo?:string;
+    nombre:string;
+    apellidos:string;
+    sexo:string;
+    email:string;
+    fechaNacimiento:string;
+    pass?:string;
+    telefono:number;
+    type: string;
+    edit?:boolean;
 }

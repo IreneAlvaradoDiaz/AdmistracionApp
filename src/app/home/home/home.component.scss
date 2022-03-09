@@ -1,0 +1,55 @@
+
+.boton{
+    font-family: 'Calistoga';
+    background-color: #262629;
+    color: white;
+    width: 500px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.advert{
+    position: absolute;
+    top: 350px;
+    margin-left: 100px;
+}
+
+.ranking {
+    position: relative;
+    bottom: 200px;
+    margin-left: 100px;
+}
+
+.user{
+    position: relative;
+    top: 230px;
+}
+
+.pet{
+    position: relative;
+    bottom: 250px;
+}
+
+.principal{    
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+img{
+    width: 500px;
+    height: 400px;
+
+}
+
+.img{
+    position: relative;
+    right: -150px;
+    bottom: 100px;
+}
+
+div{
+    height: 400px;
+}

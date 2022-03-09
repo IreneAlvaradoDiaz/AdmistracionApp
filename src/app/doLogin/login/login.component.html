@@ -1,0 +1,14 @@
+<div>
+    <div style="text-align: center; margin-top: 50px; margin-bottom: -30px;">
+      <i class="pi pi-user" style="font-size: 6rem; color: #596CD9;"></i>
+    </div>
+    <div style="margin-top: 100px; text-align: center;">
+      <h1 style="margin-bottom: -10px;">Correo Electrónico</h1><br>
+      <input type="text" pInputText placeholder="Gmail" [(ngModel)]="email">
+      <h1 style="margin-bottom: -10px; margin-top: 50px;">Contraseña</h1><br>
+      <input type="text" pInputText type="password" [(ngModel)]="pass" placeholder="password">
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button pButton  type="button" label="Acceder" (click)="login()" class="boton"></button>
+    </div> 
+  </div>
